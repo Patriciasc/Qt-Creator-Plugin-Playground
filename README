@@ -1,0 +1,18 @@
+Installation steps:
+
+1. Tell QMake the location of the QtCreator sources and the QtCreator build.
+Assuming the sources of QtCreator are located at "/home/john/qt-creator" and
+the build is located at "/home/john/qt-creator-build":
+
+qmake -set QTC_SOURCE /home/john/qt-creator
+qmake -set QTC_BUILD /home/john/qt-creator-build
+
+Per default QTC_SOURCE and QTC_BUILD are set to "../qt-creator".
+
+2. Build
+qmake
+make
+make install
+
+The plugin will be installed into the directory specified by QTC_BUILD.
+Starting the locally build QtCreator will automatically embed the plugin.
